@@ -1,0 +1,54 @@
+{
+  "categories": [
+    {
+      "id": "a2da0b60-c0d7-44b0-9919-e3b61698980f",
+      "name": "我的捷徑",
+      "shortcuts": [
+        {
+          "acceptAllCertificates": true,
+          "bodyContent": "",
+          "codeOnPrepare": "{\n// 1. Get Variable\nconst rawUrl \u003d getVariable(/*[variable]*/\"d3647ed4-8dee-4ec9-aed3-cb814c9fe80f\"/*[/variable]*/);\n\n// 2. decodeURIComponent, change %3A to :，%2F to /, so on so forth.\nconst decodedUrl \u003d decodeURIComponent(rawUrl);\n\n// 3. (Optional) Use trim() to remove additional space.\nlet finalUrl \u003d decodedUrl.trim();\n\n// 4. Store back to url.\nsetVariable(/*[variable]*/\"d3647ed4-8dee-4ec9-aed3-cb814c9fe80f\"/*[/variable]*/, finalUrl);\n\n}",
+          "codeOnSuccess": "{\n\n    // \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n    // 0. Initialization\n    // \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n    const inputUrl \u003d getVariable(/*[variable]*/\"d3647ed4-8dee-4ec9-aed3-cb814c9fe80f\"/*[/variable]*/);\n    let finalUrl \u003d inputUrl; \n    let html \u003d \"\";\n\n    try {\n        if (typeof response !\u003d\u003d \u0027undefined\u0027 \u0026\u0026 response) {\n            if (response.url) finalUrl \u003d response.url;\n            html \u003d response.body;\n        }\n    } catch (e) {}\n\n    // \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n    // ⚔️ Parse the Googlr page for short url.\n    // \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n    if (finalUrl.indexOf(\"goo.gl\") !\u003d\u003d -1 || finalUrl.indexOf(\"app.goo.gl\") !\u003d\u003d -1) {\n        if (html) {\n            showToast (\"Still short url \");\n            const deepLinkMatch \u003d html.match(/https:\\/\\/www\\.google\\.com\\/maps\\/[^\"]+/);\n            if (deepLinkMatch) {\n                finalUrl \u003d deepLinkMatch[0];\n            }\n        }\n    }\n\n    // \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n    // 🔑 Global URL Decode\n    // \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n    try {\n        finalUrl \u003d decodeURIComponent(finalUrl);\n    } catch (e) {\n        showDialog (\"Decode failed\");\n    }\n    // 🛑 Checkpoint\n    if (finalUrl.indexOf(\"http\") \u003d\u003d\u003d -1) {\n        showDialog(\"Error\", \"Invalid URL！\\nCurrent contents \" + finalUrl);\n        throw new Error(\"Invalid URL\");\n    }\n\n    // \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n    // 1. Position Extraction\n    // \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n    let lat \u003d \"\";\n    let lon \u003d \"\";\n    let name \u003d \"\";\n\n    // Get !3d...!4d...\n    const dataMatch \u003d finalUrl.match(/!3d(-?\\d+\\.\\d+)!4d(-?\\d+\\.\\d+)/);\n    if (dataMatch) {\n        lat \u003d dataMatch[1];\n        lon \u003d dataMatch[2];\n    } else {\n        // Use regex to get @lat,lon\n        const atMatch \u003d finalUrl.match(/@(-?\\d+\\.\\d+),(-?\\d+\\.\\d+)/);\n        if (atMatch) {\n            lat \u003d atMatch[1];\n            lon \u003d atMatch[2];\n        }\n    }\n\n    // \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n    // 2. PoiName Extraction\n    // \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n    // Plan A: HTML Meta Tag\n    if (html) {\n        try {\n            const metaMatch \u003d html.match(/meta\\s+(?:content\u003d\"([^\"]+)\"\\s+property\u003d\"og:title\"|property\u003d\"og:title\"\\s+content\u003d\"([^\"]+)\")/);\n            if (metaMatch) name \u003d metaMatch[1] || metaMatch[2];\n                if (!(!name || name \u003d\u003d\u003d \"Google Maps\" || name \u003d\u003d\u003d \"\"))\n                    showToast (\"Get poi_name from og:title \"+name);\n        } catch (e) {}\n    }\n\n    // Plan B: URL Reversion Extraction\n    if (!name || name \u003d\u003d\u003d \"Google Maps\") {\n        const placeMatch \u003d finalUrl.match(/\\/place\\/([^\\/]+)/);\n        if (placeMatch) {\n            let rawName \u003d placeMatch[1];\n            \n            rawName \u003d rawName.replace(/\\+/g, \" \");\n            rawName \u003d rawName.replace(/[,，].*$/, \"\");\n            rawName \u003d rawName.replace(/^\\d+.*?[號樓Ff]/, \"\");\n            name \u003d rawName.trim();\n            showToast (\"Get poi_name from Url \"+name);\n        }\n    }\n\n    // \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n    // 3. Navigate to Amap\n    // \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\n    if (lat \u0026\u0026 lon) {\n        if (!name || name \u003d\u003d\u003d \"Google Maps\" || name \u003d\u003d\u003d \"\") name \u003d lat + \",\" + lon;\n        \n        const amapUrl \u003d \"androidamap://viewMap?sourceApplication\u003dHTTPShortcuts\u0026poiname\u003d\" + encodeURIComponent(name) + \"\u0026lat\u003d\" + lat + \"\u0026lon\u003d\" + lon + \"\u0026dev\u003d1\";\n        \n        openUrl(amapUrl);\n    } else {\n        showDialog(\"解析失敗\", \"找不到座標。\\nFinalURL (Decoded): \");\n    }\n\n}\n",
+          "headers": [
+            {
+              "key": "User-Agent",
+              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+            },
+            {
+              "key": "Accept-Language",
+              "value": "zh-TW,zh;q\u003d0.9,en-US;q\u003d0.8,en;q\u003d0.7"
+            }
+          ],
+          "iconName": "flat_color_play",
+          "id": "cca3bd60-2ec6-4691-80ef-4780697209d6",
+          "keepConnectionOpen": true,
+          "method": "GET",
+          "name": "Gmap2Amap",
+          "quickSettingsTileShortcut": true,
+          "responseHandling": {
+            "actions": [
+              "rerun",
+              "share",
+              "save"
+            ],
+            "successOutput": "none"
+          },
+          "runInForegroundService": true,
+          "url": "{{d3647ed4-8dee-4ec9-aed3-cb814c9fe80f}}"
+        }
+      ]
+    }
+  ],
+  "compatibilityVersion": 90,
+  "createdAt": "2026-01-23T14:11:24.882Z",
+  "originDeviceId": "CH1WKPX8AL",
+  "variables": [
+    {
+      "id": "d3647ed4-8dee-4ec9-aed3-cb814c9fe80f",
+      "isShareText": true,
+      "key": "share_url",
+      "value": "https://www.google.com/maps/place/112臺北市北投區立德路15號華碩電腦股份有限公司/@25.1248313,121.471118,15z/data\u003d!4m6!3m5!1s0x3442af0d209a0283:0xf5eec62764905f30!8m2!3d25.1248313!4d121.471118!16s/g/1pztvfspg?utm_campaign\u003dml-ardl\u0026g_ep\u003dEg1tbF8yMDI2MDExOV8wIOC7DCoASAJQAQ\u003d\u003d"
+    }
+  ],
+  "version": 91
+}
