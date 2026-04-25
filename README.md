@@ -6,6 +6,9 @@
 
 > ⚠️ 由於作者較常使用 iOS，因此 Android 版本可能沒有經過嚴格測試。
 
+## Pre-requirement
+Actions (https://apps.apple.com/tw/app/actions/id1586435171)
+
 ## Methods
 
 當前我們有三個方法將 Google Maps 上的地標分享給高德地圖：
@@ -57,6 +60,9 @@
 Amap (高德地圖) has fewer roads and landmarks in Taiwan compared to Google Maps and Apple Maps, making it difficult to find navigation targets. This shortcut is designed to share landmarks from Google Maps to Amap, enabling direct navigation to destinations that only exist on Google Maps.
 
 > ⚠️ Since the author primarily uses iOS, the Android version may not have been thoroughly tested.
+
+## Pre-requirement
+Actions (https://apps.apple.com/tw/app/actions/id1586435171)
 
 ### Methods
 
