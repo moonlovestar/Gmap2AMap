@@ -7,9 +7,9 @@
 > ⚠️ 由於作者較常使用 iOS，因此 Android 版本可能沒有經過嚴格測試。
 
 ## Pre-requirement
-Actions (https://apps.apple.com/tw/app/actions/id1586435171) - iOS
-HTTP Request Shortcuts (https://play.google.com/store/apps/details?id=ch.rmy.android.http_shortcuts&hl=zh_TW) - Android
-MacroDroid (https://play.google.com/store/apps/details?id=com.arlosoft.macrodroid&hl=zh_TW) - Android
+1. Actions (https://apps.apple.com/tw/app/actions/id1586435171) - iOS
+2. HTTP Request Shortcuts (https://play.google.com/store/apps/details?id=ch.rmy.android.http_shortcuts&hl=zh_TW) - Android
+3. MacroDroid (https://play.google.com/store/apps/details?id=com.arlosoft.macrodroid&hl=zh_TW) - Android
 
 ## Methods
 
@@ -64,9 +64,9 @@ Amap (高德地圖) has fewer roads and landmarks in Taiwan compared to Google M
 > ⚠️ Since the author primarily uses iOS, the Android version may not have been thoroughly tested.
 
 ## Pre-requirement
-Actions (https://apps.apple.com/tw/app/actions/id1586435171) - iOS
-HTTP Request Shortcuts (https://play.google.com/store/apps/details?id=ch.rmy.android.http_shortcuts&hl=zh_TW) - Android
-MacroDroid (https://play.google.com/store/apps/details?id=com.arlosoft.macrodroid&hl=zh_TW) - Android
+1. Actions (https://apps.apple.com/tw/app/actions/id1586435171) - iOS
+2. HTTP Request Shortcuts (https://play.google.com/store/apps/details?id=ch.rmy.android.http_shortcuts&hl=zh_TW) - Android
+3. MacroDroid (https://play.google.com/store/apps/details?id=com.arlosoft.macrodroid&hl=zh_TW) - Android
 
 ### Methods
 
